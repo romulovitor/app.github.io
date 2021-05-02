@@ -1,193 +1,245 @@
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<html lang="en">
 
-<div class="container" style="width:60%">
-    <h1>I want these products</h1>
-    <table class="table">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>IoT - Index </title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/new-age.min.css" rel="stylesheet">
+
+    </head>
+    <body id="page-top">
         
-        <tbody>
+        <div class="jumbotron">
+				<h2>
+					Bem vindo ao seu painel de controle
+				</h2>
+				<p>
+                                    Aqui contém todas informações necessárias para manipular seu dispositivo, <strong> selecione </strong> as configurações
+                                        desejadas baseada nas descrições de cada especificação apresentada.
+                                </p>
+				
+			</div>
+        
+                     
+             
+        <form action="action.php" method="POST" class="form-vertical" id="frm"> 
+        <div class="container-fluid" >
+               
+               
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-center"><h2> Ar-condicionado </h2> </div>
+                        
+                        <table class="table">
+                            <thead>
+                                	
+                                
+                                <tr>
+                                    <th>
+                                        Selecionar
+                                    </th>
+                                    <th>
+                                        Descrição
+                                    </th>
+                                    <th>
+                                        Valor
+                                    </th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+<!--                                <tr class="table-warning">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        código para identificação de campos contidos na mensagem enviada ao ar-condicionado | identificador do dispositivo nas mensagens enviadas por ele Obrigatório
+                                    </td>
+                                    <td>
+                                        a soma de todos os códigos de configurações contidas na mensagem | ID do dispositivo
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                </tr>-->
+                                <tr class="table-active">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="temperatura_17_23" value="4">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        a temperatura máxima desejada para a sala (°C).  
+                                        <strong>default</strong>: 18 
+                                    </td>
+                                    <td>
+                                        de 17 a 23
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="temperatura_16_22" value="8">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        a temperatura mínima desejada para a sala (°C) <strong>default</strong>: 16
+                                    </td>
+                                    <td>
+                                        de 16 a 22
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="table-active">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="tempo_1_120" value="16">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        tempo entre comandos ao ar-condicionado (minutos). <strong>default</strong>: 10
+                                    </td>
+                                    <td>
+                                        de 1 a 120
+                                    </td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="temperatura_op_16_23" value="32">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        temperatura que o ar-condicionado irá operar (°C) <strong>default</strong>: 17
+                                    </td>
+                                    <td>
+                                        de 16 a 23
+                                    </td>
+                                  
+                                </tr>
+
+                                <tr class="table-active">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="on_off_1_0" value="1">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        campo que indica ON/OFF  <strong>default</strong>: OFF
+                                    </td>
+                                    <td>
+                                        ON: 1 / OFF: 0
+                                    </td>
+                                    
+                                </tr>
+                                <tr >
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="sala_vazia_2" value="2">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        estado do ar-condicionado quando a sala estiver vazia  <strong>default</strong>: ON
+                                    </td>
+                                    <td>
+                                        ON: 1 / OFF: 0
+                                    </td>
+                                   
+                                </tr>
+<!--                                <tr class="table-active">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        identificador da requisição, presente tanto na requisição, quanto na resposta (numérico)  <em> Obrigatório </em>
+                                    </td>
+                                    <td>
+                                        ID da mensagem
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                </tr>-->
+                                <tr class="table-active">
+                                    <td>
+
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="timestamp_0" value="0">
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        timestamp
+                                    </td>
+                                    <td>
+                                        dd/mm/aaaa hh:mm:ss
+                                    </td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             
-        <label for="cars">Choose a car:</label>
 
-        <select name="cars" id="cars">
-            <option value="volvo">Ar-condicionado</option>
-            <option value="saab">Temperatura</option>
-            <option value="mercedes">Movimento</option>
-            <option value="audi">Luminosidade</option>
-        </select> 
 
-        </tr>
-        
-        </tbody>
-    </table>
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>
-							#
-						</th>
-						<th>
-							Descrição
-						</th>
-						<th>
-							Valor
-						</th>
-						<th>
-							Código
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							1
-						</td>
-						<td>
-							código para identificação de campos contidos na mensagem enviada ao ar-condicionado | identificador do dispositivo nas mensagens enviadas por ele Obrigatório
-						</td>
-						<td>
-							a soma de todos os códigos de configurações contidas na mensagem | ID do dispositivo
-						</td>
-						<td>
-							0
-						</td>
-					</tr>
-					<tr class="table-active">
-						<td>
-							1
-						</td>
-						<td>
-							a temperatura máxima desejada para a sala (°C) <em>default</em>: 18
-						</td>
-						<td>
-							de 17 a 23
-						</td>
-						<td>
-							4
-						</td>
-					</tr>
-					<tr class="table-success">
-						<td>
-							2
-						</td>
-						<td>
-							a temperatura mínima desejada para a sala (°C) <em>default</em>: 16
-						</td>
-						<td>
-							de 16 a 22
-						</td>
-						<td>
-							8
-						</td>
-					</tr>
-					<tr class="table-warning">
-						<td>
-							3
-						</td>
-						<td>
-							tempo entre comandos ao ar-condicionado (minutos). <em>default</em>: 10
-						</td>
-						<td>
-							de 1 a 120
-						</td>
-						<td>
-							16
-						</td>
-					</tr>
-					<tr class="table-danger">
-						<td>
-							4
-						</td>
-						<td>
-							temperatura que o ar-condicionado irá operar (°C) <em>default</em>: 17
-						</td>
-						<td>
-							de 16 a 23
-						</td>
-						<td>
-							32
-						</td>
-					</tr>
-                                        
-                                        <tr class="table-danger">
-						<td>
-							4
-						</td>
-						<td>
-                                                    campo que indica ON/OFF  <em> default</em>: OFF
-						</td>
-						<td>
-							ON: 1 / OFF: 0
-						</td>
-						<td>
-							1
-						</td>
-					</tr>
-                                        <tr class="table-danger">
-						<td>
-							4
-						</td>
-						<td>
-                                                    estado do ar-condicionado quando a sala estiver vazia  <em> default</em>: ON
-						</td>
-						<td>
-							ON: 1 / OFF: 0
-						</td>
-						<td>
-							2
-						</td>
-					</tr>
-                                        <tr class="table-danger">
-						<td>
-							4
-						</td>
-						<td>
-                                                    identificador da requisição, presente tanto na requisição, quanto na resposta (numérico)  <em> Obrigatório </em>
-						</td>
-						<td>
-							ID da mensagem
-						</td>
-						<td>
-							0
-						</td>
-					</tr>
-                                        <tr class="table-danger">
-						<td>
-							4
-						</td>
-						<td>
-                                                    timestamp
-						</td>
-						<td>
-							dd/mm/aaaa hh:mm:ss
-						</td>
-						<td>
-							0
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
-    
-    
-    <!-- comment 
-    <form>
-        <label>Name</label>
-        <input type="text" class="input-medium">
-        <label>Phone</label>
-        <input type="text" class="input-medium">
-        <label>E-mail</label>
-        <input type="text" class="input-medium">
-        <label>Address</label>
-        <input type="text" class="input-medium"> 
-    </form>
-       -->
-       <button class="btn btn-block btn-success btn-large" style="float: bottom;" >Enviar</button>
-</div>
+            <!-- comment 
+            - create to default paramns on sender 
+            - sender to endpoint 
+            -->
+            <button class="btn btn-block btn-success btn-large" style="float: bottom;" >Enviar</button>
+           
+        </div>
+             </form>
+    </body>
